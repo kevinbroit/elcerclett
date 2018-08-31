@@ -1,0 +1,69 @@
+<header>
+  <mat-toolbar>
+
+      <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-button routerLink="/"><h1>{{title}}</h1></button>
+      <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+        <button mat-button *ngFor="let item of menuItems" routerLink="{{item.link}}">
+          {{item.name | translate | uppercase}}
+        </button>
+      </div>
+      <span class="fill-remaining-space"></span>
+          <div fxFlex class="text--right">
+              <app-search-bar></app-search-bar>
+              <button mat-icon-button [matMenuTriggerFor]="matmenu">
+                  <mat-icon>public</mat-icon>
+              </button>
+              <mat-menu #matmenu="matMenu">
+                  <button mat-menu-item (click)="changeLanguage('zh-hk')">
+                      <mat-icon>flag</mat-icon>
+                      <span>
+                          Traditional Chinese
+                      </span>
+                  </button>
+                  <button mat-menu-item (click)="changeLanguage('zh-cn')">
+                      <mat-icon>flag</mat-icon>
+                      <span>
+                          Simplified Chinese
+                      </span>
+                  </button>
+                  <button mat-menu-item (click)="changeLanguage('en')">
+                      <mat-icon>flag</mat-icon>
+                      <span>
+                          English
+                      </span>
+                  </button>
+                  <button mat-menu-item (click)="changeLanguage('es')">
+                      <mat-icon>flag</mat-icon>
+                      <span>
+                          Español
+                      </span>
+                  </button>
+                  <button mat-menu-item (click)="changeLanguage('pt-br')">
+                      <mat-icon>flag</mat-icon>
+                      <span>
+                          Português
+                      </span>
+                  </button>
+                 <button mat-menu-item (click)="changeLanguage('eu')">
+                      <mat-icon>flag</mat-icon>
+                      <span>
+                          Euskera
+                      </span>
+                  </button>
+              </mat-menu>
+          </div>
+
+  </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item *ngFor="let item of menuItems" routerLink="{{item.link}}">
+      {{item.name | translate | uppercase}}
+    </button>
+  </mat-menu>
+  <section class="progress-bar">
+      <mat-progress-bar [color]="'primary'" [mode]="progressBarMode">
+      </mat-progress-bar>
+  </section>
+</header>

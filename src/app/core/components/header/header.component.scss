@@ -1,0 +1,9 @@
+@import "mixins";
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+mat-toolbar{
+  color: $secondary--color;
+  background: $primary--color
+}

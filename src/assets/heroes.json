@@ -1,0 +1,24 @@
+[
+  {
+    "id":"1",
+    "name":"Kevin Broit",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "group": "Primera",
+    "strength":"Top Spin",
+    "team":"Primera",
+    "default":true
+  },
+  {
+    "id":"4",
+    "name":"Oriol Vinyals",
+    "age": 37,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Butterfly Tenergy",
+    "group": "Primera",
+    "strength":"Reves",
+    "team":"Primera",
+    "default":true
+  },
+]
