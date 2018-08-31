@@ -29,18 +29,18 @@ export class AppComponent implements OnInit {
     this.translateService.setDefaultLang('en');
     this.translateService.use('en');
 
-    this.title.setTitle('Angular Example App');
+    this.title.setTitle('EL CERCLE TT');
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
         switch (event.urlAfterRedirects) {
           case '/':
             this.meta.updateTag({
               name: 'description',
-              content: 'Angular Example app with Angular CLI, Angular Material and more'
+              content: 'Website EL CERCLE TT'
             });
             break;
           case '/' + AppConfig.routes.heroes:
-            this.title.setTitle('Heroes list');
+            this.title.setTitle('Heroes');
             this.meta.updateTag({
               name: 'description',
               content: 'List of super-heroes'

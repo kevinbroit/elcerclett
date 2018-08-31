@@ -1,9 +1,10 @@
-<mat-form-field id="search-input">
+
+  <mat-form-field id="search-input" fxShow="false" fxShow.gt-sm>
     <input matInput placeholder="{{ 'findHero' | translate }}!"
            [matAutocomplete]="heroesAutocomplete" [formControl]="heroFormControl">
 </mat-form-field>
 
-<mat-autocomplete #heroesAutocomplete="matAutocomplete">
+<mat-autocomplete #heroesAutocomplete="matAutocomplete" >
     <mat-option *ngFor="let hero of filteredHeroes"
                 (onSelectionChange)="searchHero(hero)"
                 [value]="hero.name">

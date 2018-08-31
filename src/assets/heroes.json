@@ -21,4 +21,15 @@
     "team":"Primera",
     "default":true
   },
+  {
+    "id":"5",
+    "name":"Pep Planas",
+    "age": 48,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "group": "Veteranos",
+    "strength":"Defensa y ataque",
+    "team":"Veteranos",
+    "default":true
+  }
 ]
