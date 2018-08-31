@@ -31,5 +31,16 @@
     "strength":"Defensa y ataque",
     "team":"Veteranos",
     "default":true
+  },
+  {
+    "id":"6",
+    "name":"Isidro Cortillas",
+    "age": 50,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "group": "Veteranos",
+    "strength":"Picos y ataque",
+    "team":"Veteranos",
+    "default":true
   }
 ]
