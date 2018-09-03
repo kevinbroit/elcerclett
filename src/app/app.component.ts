@@ -4,7 +4,9 @@ import {Meta, Title} from '@angular/platform-browser';
 import {NavigationEnd, Router} from '@angular/router';
 import {AppConfig} from './config/app.config';
 import {MatSnackBar} from '@angular/material';
+import { MatIconRegistry } from "@angular/material/icon";
 import {_} from '@biesbjerg/ngx-translate-extract/dist/utils/utils';
+import { DomSanitizer } from "@angular/platform-browser";
 
 declare const Modernizr;
 
@@ -21,13 +23,21 @@ export class AppComponent implements OnInit {
               private title: Title,
               private meta: Meta,
               private snackBar: MatSnackBar,
-              private router: Router) {
+              private router: Router,
+              private matIconRegistry: MatIconRegistry,
+                  private domSanitizer: DomSanitizer
+
+            ) {
     this.isOnline = navigator.onLine;
+    this.matIconRegistry.addSvgIcon(
+      "tt",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/images/tt.svg")
+    );
   }
 
   ngOnInit() {
-    this.translateService.setDefaultLang('en');
-    this.translateService.use('en');
+    this.translateService.setDefaultLang('es');
+    this.translateService.use('es');
 
     this.title.setTitle('EL CERCLE TT');
     this.router.events.subscribe((event: any) => {

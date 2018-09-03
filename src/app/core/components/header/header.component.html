@@ -4,7 +4,7 @@
       <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
         <mat-icon>menu</mat-icon>
       </button>
-      <button mat-button routerLink="/"><h1>{{title}}</h1></button>
+      <button mat-button routerLink="/"><h1>{{title}}</h1> </button><mat-icon svgIcon="tt"></mat-icon>
       <div fxLayout="row" fxShow="false" fxShow.gt-sm>
         <button mat-button *ngFor="let item of menuItems" routerLink="{{item.link}}">
           {{item.name | translate | uppercase}}

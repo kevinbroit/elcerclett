@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
               private progressBarService: ProgressBarService,
               private translateService: TranslateService) {
     this.appConfig = appConfig;
-    this.title = 'EL CERCLE TT';
+    this.title = 'EL CERCLE ';
 
   }
 

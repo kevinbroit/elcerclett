@@ -48,7 +48,7 @@
               },
               "src/assets/css/reset.css",
               "src/assets/css/loading.css",
-              "src/app/styles/global.scss"
+              "src/app/styles/main.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
