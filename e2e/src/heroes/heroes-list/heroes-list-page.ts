@@ -1,12 +1,12 @@
 import {browser, by, element} from 'protractor';
 import {AppConfig} from '../../../../src/app/config/app.config';
 
-export class HeroesListPage {
+export class PlayersListPage {
   static navigateTo(): any {
-    return browser.get(AppConfig.routes.heroes);
+    return browser.get(AppConfig.routes.players);
   }
 
-  static getNumberHeroes(): any {
+  static getNumberPlayers(): any {
     return element.all(by.css('#left mat-list-item')).count();
   }
 }

@@ -11,7 +11,8 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {Error404Page} from './pages/error404/error404.page';
 import {SearchBarComponent} from './components/search-bar/search-bar.component';
-import {HeroService} from '../modules/heroes/shared/hero.service';
+import {PlayerService} from '../modules/players/shared/player.service';
+import {TeamService} from '../modules/teams/shared/team.service';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import {HeroService} from '../modules/heroes/shared/hero.service';
     FooterComponent
   ],
   providers: [
-    HeroService,
+    PlayerService,
+    TeamService,
     LoggerService,
     ProgressBarService
   ]

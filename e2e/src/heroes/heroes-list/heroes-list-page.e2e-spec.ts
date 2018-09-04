@@ -1,14 +1,14 @@
-import {HeroesListPage} from './heroes-list-page';
+import {PlayersListPage} from './players-list-page';
 
 describe('Home page', function () {
   let page;
 
   beforeEach(() => {
-    page = new HeroesListPage();
+    page = new PlayersListPage();
   });
 
-  it('should contains equal or more heroes than default ones', () => {
-    HeroesListPage.navigateTo();
-    expect<any>(HeroesListPage.getNumberHeroes()).toBeGreaterThanOrEqual(8);
+  it('should contains equal or more players than default ones', () => {
+    PlayersListPage.navigateTo();
+    expect<any>(PlayersListPage.getNumberPlayers()).toBeGreaterThanOrEqual(8);
   });
 });

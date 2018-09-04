@@ -8,7 +8,8 @@ const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: '', component: HomePage},
   {path: AppConfig.routes.error404, component: Error404Page},
-  {path: AppConfig.routes.heroes, loadChildren: './modules/heroes/heroes.module#HeroesModule'},
+  {path: AppConfig.routes.players, loadChildren: './modules/players/players.module#PlayersModule'},
+  {path: AppConfig.routes.teams, loadChildren: './modules/teams/teams.module#TeamsModule'},
 
   // otherwise redirect to 404
   {path: '**', redirectTo: '/' + AppConfig.routes.error404}

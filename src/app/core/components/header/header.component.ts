@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
               private progressBarService: ProgressBarService,
               private translateService: TranslateService) {
     this.appConfig = appConfig;
-    this.title = 'EL CERCLE ';
+    this.title = 'EL CERCLE TT';
 
   }
 
@@ -43,8 +43,8 @@ export class HeaderComponent implements OnInit {
 
   private loadMenus(): void {
     this.menuItems = [
-      {link: '/' + AppConfig.routes.heroes, name: _('Heroes')},
-      {link: '/' + AppConfig.routes.heroes, name: _('Contact')}
+      {link: '/' + AppConfig.routes.players, name: _('players')},
+      {link: '/' + AppConfig.routes.players, name: _('contact')}
     ];
   }
 }

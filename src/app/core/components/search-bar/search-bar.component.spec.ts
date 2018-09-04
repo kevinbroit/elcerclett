@@ -8,12 +8,12 @@ import {APP_BASE_HREF} from '@angular/common';
 import {TestsModule} from '../../../shared/modules/tests.module';
 import {Error404Page} from '../../pages/error404/error404.page';
 import {HomePage} from '../../pages/home/home.page';
-import {HeroService} from '../../../modules/heroes/shared/hero.service';
+import {PlayerService} from '../../../modules/players/shared/player.service';
 
-describe('HeroSearchComponent', () => {
+describe('PlayerSearchComponent', () => {
   let fixture;
   let component;
-  let heroService;
+  let playerService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -30,7 +30,7 @@ describe('HeroSearchComponent', () => {
       providers: [
         {provide: APP_CONFIG, useValue: AppConfig},
         {provide: APP_BASE_HREF, useValue: '/'},
-        HeroService
+        PlayerService
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
@@ -38,25 +38,25 @@ describe('HeroSearchComponent', () => {
     fixture = TestBed.createComponent(SearchBarComponent);
     fixture.detectChanges();
     component = fixture.debugElement.componentInstance;
-    heroService = TestBed.get(HeroService);
+    playerService = TestBed.get(PlayerService);
   }));
 
-  it('should create hero search component', (() => {
+  it('should create player search component', (() => {
     expect(component).toBeTruthy();
   }));
 
-  it('should get all heroes', fakeAsync(() => {
-    spyOn(heroService, 'getHeroes').and.returnValue(Promise.resolve(true));
+  it('should get all players', fakeAsync(() => {
+    spyOn(playerService, 'getPlayers').and.returnValue(Promise.resolve(true));
     tick();
     fixture.detectChanges();
-    expect(component.defaultHeroes.length).toBeGreaterThan(0);
-    for (const hero of component.defaultHeroes) {
-      expect(hero.default).toBe(true);
+    expect(component.defaultPlayers.length).toBeGreaterThan(0);
+    for (const player of component.defaultPlayers) {
+      expect(player.default).toBe(true);
     }
   }));
 
-  it('should filter heroes array', (() => {
-    component.defaultHeroes = [
+  it('should filter players array', (() => {
+    component.defaultPlayers = [
       {
         'id': 1,
         'name': 'batman',
@@ -68,8 +68,8 @@ describe('HeroSearchComponent', () => {
         'default': false
       }
     ];
-    expect(component.filterHeroes('batman').length).toBe(1);
-    expect(component.filterHeroes('spiderman').length).toBe(0);
-    expect(component.filterHeroes().length).toBe(2);
+    expect(component.filterPlayers('batman').length).toBe(1);
+    expect(component.filterPlayers('spiderman').length).toBe(0);
+    expect(component.filterPlayers().length).toBe(2);
   }));
 });

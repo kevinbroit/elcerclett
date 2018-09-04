@@ -8,8 +8,8 @@ describe('Home page', function () {
     page = new HomePage();
   });
 
-  it('should contains heroes limit', () => {
+  it('should contains players limit', () => {
     HomePage.navigateTo();
-    expect<any>(HomePage.getNumberHeroes()).toBe(AppConfig.topHeroesLimit);
+    expect<any>(HomePage.getNumberPlayers()).toBe(AppConfig.topPlayersLimit);
   });
 });

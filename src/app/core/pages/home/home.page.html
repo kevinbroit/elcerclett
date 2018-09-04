@@ -1,26 +1,10 @@
-<mat-progress-spinner *ngIf="!heroes"
-                      class="progress__spinner"
-                      [color]="'primary'"
-                      [mode]="'indeterminate'">
-</mat-progress-spinner>
 <section class="sidenav-content">
   <div class="content">
-    <mat-card class="card-demo">
-     <mat-card-title>{{'topHeroes' | translate}}</mat-card-title>
-     <mat-card-subtitle></mat-card-subtitle>
-     <mat-card-content>
-         <div fxLayout="row wrap" fxLayout.xs="column wrap">
-              <mat-card *ngFor="let hero of heroes" fxFlex.gt-xs="50%" [fxFlex.gt-md]="25">
-                <mat-card-header>
-                  <div (click)="seeHeroDetails(hero)" mat-card-avatar
-                       [ngStyle]="{'background-image': 'url(assets/images/heroes/' + hero.id + '-thumbnail.jpg)'}"></div>
-                  <mat-card-title (click)="seeHeroDetails(hero)">{{hero.name}}</mat-card-title>
-                  <mat-card-subtitle (click)="seeHeroDetails(hero)">{{hero.strength}}</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image class="img" (click)="seeHeroDetails(hero)" src="assets/images/heroes/{{hero.id}}.jpg">
-              </mat-card>
-         </div>
-     </mat-card-content>
-   </mat-card>
+    <h1 >El Cercle TT</h1>
+    <p>
+      El Cercle TT Gràcia, és un club esportiu dedicat a la pràctica i promoció del tennis de taula, activitat esportiva que neix a la entitat cultural El Cercle de Gràcia, formant la secció de Tennis de Taula.
+      Disposem de una sala polivalent amb la possibilitat de muntar una taula amb mides reglamentàries per competir o 3 taules per entrenament.
+      Juguem principalment a lligues de veterans des de l'any 2003.
+    </p>
 </div>
 </section>

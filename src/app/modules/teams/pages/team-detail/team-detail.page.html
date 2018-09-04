@@ -1,0 +1,29 @@
+<h1 class="header__title">{{'teamDetail' | translate}}</h1>
+<mat-progress-spinner *ngIf="!team"
+                      class="progress__spinner"
+                      [color]="'primary'"
+                      [mode]="'indeterminate'">
+</mat-progress-spinner>
+<div id="teame-detail" *ngIf="team">
+    <ng-container>
+        <mat-card class="team-card">
+            <mat-card-header>
+                <div mat-card-avatar class="team-header__image"
+                     [ngStyle]="{'background-image': 'url(assets/images/teams/' + team.id + '-thumbnail.jpg)'}"></div>
+                <mat-card-title>{{team.name}}</mat-card-title>
+                <mat-card-subtitle>{{team.strength}}</mat-card-subtitle>
+                <div class="flex-spacer"></div>
+
+            </mat-card-header>
+            <img mat-card-image src="assets/images/teams/{{team.id}}.jpg">
+        </mat-card>
+
+        <div id="team-json">
+            <pre>{{team | json}}</pre>
+        </div>
+    </ng-container>
+</div>
+
+<button mat-raised-button type="button" (click)="goBack()">
+    {{'goBack' | translate | uppercase}}
+</button>

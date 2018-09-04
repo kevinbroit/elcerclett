@@ -4,8 +4,8 @@ import {FormControl} from '@angular/forms';
 import {Router} from '@angular/router';
 import {AppConfig} from '../../../config/app.config';
 import {LoggerService} from '../../services/logger.service';
-import {Hero} from '../../../modules/heroes/shared/hero.model';
-import {HeroService} from '../../../modules/heroes/shared/hero.service';
+import {Player} from '../../../modules/players/shared/player.model';
+import {PlayerService} from '../../../modules/players/shared/player.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -18,36 +18,36 @@ import {HeroService} from '../../../modules/heroes/shared/hero.service';
 
 export class SearchBarComponent implements OnInit {
 
-  defaultHeroes: Array<Hero>;
-  heroFormControl: FormControl;
-  filteredHeroes: any;
+  defaultPlayers: Array<Player>;
+  playerFormControl: FormControl;
+  filteredPlayers: any;
 
-  constructor(private heroService: HeroService,
+  constructor(private playerService: PlayerService,
               private router: Router) {
-    this.defaultHeroes = [];
-    this.heroFormControl = new FormControl();
+    this.defaultPlayers = [];
+    this.playerFormControl = new FormControl();
   }
 
   ngOnInit() {
-    this.heroService.getHeroes().subscribe((heroes: Array<Hero>) => {
-      this.defaultHeroes = heroes.filter(hero => hero['default']);
+    this.playerService.getPlayers().subscribe((players: Array<Player>) => {
+      this.defaultPlayers = players.filter(player => player['default']);
 
-      this.heroFormControl.valueChanges.pipe(
+      this.playerFormControl.valueChanges.pipe(
         startWith(null),
-        map(value => this.filterHeroes(value)))
-        .subscribe(heroesFiltered => {
-          this.filteredHeroes = heroesFiltered;
+        map(value => this.filterPlayers(value)))
+        .subscribe(playersFiltered => {
+          this.filteredPlayers = playersFiltered;
         });
     });
   }
 
-  filterHeroes(val: string): Hero[] {
-    return val ? this.defaultHeroes.filter(hero => hero.name.toLowerCase().indexOf(val.toLowerCase()) === 0 && hero['default'])
-      : this.defaultHeroes;
+  filterPlayers(val: string): Player[] {
+    return val ? this.defaultPlayers.filter(player => player.name.toLowerCase().indexOf(val.toLowerCase()) === 0 && player['default'])
+      : this.defaultPlayers;
   }
 
-  searchHero(hero: Hero): Promise<boolean> {
-    LoggerService.log('Moved to hero with id: ' + hero.id);
-    return this.router.navigate([AppConfig.routes.heroes + '/' + hero.id]);
+  searchPlayer(player: Player): Promise<boolean> {
+    LoggerService.log('Moved to player with id: ' + player.id);
+    return this.router.navigate([AppConfig.routes.players + '/' + player.id]);
   }
 }

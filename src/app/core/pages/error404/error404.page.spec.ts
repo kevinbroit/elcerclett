@@ -5,7 +5,7 @@ import {APP_CONFIG, AppConfig} from '../../../config/app.config';
 import {MaterialModule} from '../../../shared/modules/material.module';
 import {TestsModule} from '../../../shared/modules/tests.module';
 import {Error404Page} from './error404.page';
-import {HeroService} from '../../../modules/heroes/shared/hero.service';
+import {PlayerService} from '../../../modules/players/shared/player.service';
 import {ProgressBarService} from '../../services/progress-bar.service';
 
 describe('Error404Page', () => {
@@ -25,7 +25,7 @@ describe('Error404Page', () => {
       ],
       providers: [
         {provide: APP_CONFIG, useValue: AppConfig},
-        HeroService,
+        PlayerService,
         ProgressBarService
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]

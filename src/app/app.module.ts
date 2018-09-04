@@ -10,7 +10,6 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpLoaderFactory} from './app.translate.factory';
 import {ProgressInterceptor} from './shared/interceptors/progress.interceptor';
 import {TimingInterceptor} from './shared/interceptors/timing.interceptor';
-import {NgxExampleLibraryModule} from '@ismaestro/ngx-example-library';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {ProgressBarService} from './core/services/progress-bar.service';
@@ -28,11 +27,7 @@ import {ProgressBarService} from './core/services/progress-bar.service';
         deps: [HttpClient]
       }
     }),
-    NgxExampleLibraryModule.forRoot({
-      config: {
-        say: 'hello'
-      }
-    }),
+
     CoreModule,
     AppRoutingModule
   ],

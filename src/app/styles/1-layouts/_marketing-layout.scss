@@ -1,4 +1,4 @@
-.hero {
+.player {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@
     transform: none;
   }
 
-  .hero-title {
+  .player-title {
     display: inline-block;
     font-size: 28px;
     font-weight: 400;
@@ -75,7 +75,7 @@ section#intro {
     }
   }
 
-  .hero-headline {
+  .player-headline {
     font-size: 40px;
     line-height: 64px;
     font-weight: 500;
@@ -95,7 +95,7 @@ section#intro {
     }
   }
 
-  .hero-logo {
+  .player-logo {
     display: flex;
     width: 400px;
 
@@ -245,7 +245,7 @@ section#intro {
   }
 }
 
-.button.hero-cta {
+.button.player-cta {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,7 +314,7 @@ aio-shell {
     }
   }
 
-  .cta-bar .hero-cta {
+  .cta-bar .player-cta {
     color: $blue;
   }
 }
@@ -360,7 +360,7 @@ div[layout=row]{
     }
 }
 
-.background-superhero-paper {
+.background-superplayer-paper {
     background-size: 100%;
     background-blend-mode: multiply;
 }

@@ -46,16 +46,23 @@ export class AppComponent implements OnInit {
           case '/':
             this.meta.updateTag({
               name: 'description',
-              content: 'Website EL CERCLE TT'
+              content: 'EL CERCLE TT'
             });
             break;
-          case '/' + AppConfig.routes.heroes:
-            this.title.setTitle('Heroes');
+          case '/' + AppConfig.routes.players:
+            this.title.setTitle('Jugadores');
             this.meta.updateTag({
               name: 'description',
-              content: 'List of super-heroes'
+              content: 'Jugadores'
             });
             break;
+            case '/' + AppConfig.routes.teams:
+              this.title.setTitle('Equipos');
+              this.meta.updateTag({
+                name: 'description',
+                content: 'Equipos'
+              });
+              break;
         }
       }
     });

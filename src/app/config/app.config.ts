@@ -6,12 +6,14 @@ export let APP_CONFIG = new InjectionToken('app.config');
 
 export const AppConfig: IAppConfig = {
   routes: {
-    heroes: 'heroes',
+    players: 'players',
+    teams:'teams',
     error404: '404'
   },
   endpoints: {
-    heroes:'./assets/heroes.json'
-    //heroes: 'https://elcercle.tk/api.php/heroes'
+    players:'./assets/players.json',
+    teams:'./assets/teams.json'
+    //players: 'https://elcercle.tk/api.php/players'
   },
   repositoryURL:'',
   snackBarDuration: 3000,

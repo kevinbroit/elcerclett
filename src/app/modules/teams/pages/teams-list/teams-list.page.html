@@ -1,0 +1,33 @@
+
+<div fxLayout="row">
+  <div fxFlex="10" fxFlex.gt-sm="20"></div>
+  <div fxFlex="90" fxFlex.gt-sm="80">
+    <mat-progress-spinner *ngIf="!teams"
+                          class="progress__spinner"
+                          [color]="'primary'"
+                          [mode]="'indeterminate'">
+    </mat-progress-spinner>
+
+    <div  *ngFor="let teamGrouped of teams | groupBy:'team' | pairs">
+    <h1 class="header__title"><b>{{ teamGrouped[0]}}</b></h1>
+    <br/>
+      <ng-container *ngFor="let team of teamGrouped[1]">
+
+        <mat-card class="team-card">
+          <mat-card-header>
+            <div (click)="seePlayerDetails(team)" mat-card-avatar class="team-header__image"
+                 [ngStyle]="{'background-image': 'url(assets/images/teams/' + team.id + '-thumbnail.jpg)'}"></div>
+            <mat-card-title (click)="seePlayerDetails(team)">{{team.name}}</mat-card-title>
+            <mat-card-subtitle (click)="seePlayerDetails(team)">{{team.strength}}</mat-card-subtitle>
+            <div class="flex-spacer"></div>
+
+          </mat-card-header>
+        </mat-card>
+      </ng-container>
+      <br/>
+      <br/>
+<mat-divider></mat-divider>
+    </div>
+  </div>
+  <div fxFlex="10" fxFlex.gt-sm="20"></div>
+</div>

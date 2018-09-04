@@ -3,7 +3,6 @@ import {MaterialModule} from './modules/material.module';
 import {TranslateModule} from '@ngx-translate/core';
 import {NgPipesModule} from 'ngx-pipes';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {NgxExampleLibraryModule} from '@ismaestro/ngx-example-library';
 import {CommonModule} from '@angular/common';
 
 @NgModule({
@@ -12,7 +11,6 @@ import {CommonModule} from '@angular/common';
     MaterialModule,
     FlexLayoutModule,
     TranslateModule,
-    NgxExampleLibraryModule,
     NgPipesModule
   ],
   exports: [
@@ -20,7 +18,6 @@ import {CommonModule} from '@angular/common';
     MaterialModule,
     FlexLayoutModule,
     TranslateModule,
-    NgxExampleLibraryModule,
     NgPipesModule
   ]
 })
