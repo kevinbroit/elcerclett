@@ -1,0 +1,192 @@
+[
+  {
+    "id":"1",
+    "name":"Kevin Broit",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[1],
+    "default":true
+  },{
+    "id":"2",
+    "name":"Dario Peña",
+    "age": 48,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "strength":"Defensa y ataque",
+    "teams":[1],
+    "default":true
+  },
+  {
+    "id":"3",
+    "name":"Oriol Vinyals",
+    "age": 37,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Butterfly Tenergy",
+    "strength":"Reves",
+    "teams":[1],
+    "default":true
+  },
+
+  {
+    "id":"4",
+    "name":"Oscar Casabona",
+    "age": 37,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Butterfly Tenergy",
+    "strength":"Reves",
+    "teams":[1,2],
+    "default":true
+  },
+  {
+    "id":"5",
+    "name":"Pep Planas",
+    "age": 37,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Butterfly Tenergy",
+    "strength":"Reves",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"5",
+    "name":"Jesús Monera",
+    "age": 48,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "strength":"Defensa y ataque",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"6",
+    "name":"Isidre Cortillas",
+    "age": 50,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "strength":"Picos y ataque",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"7",
+    "name":"Antonio Gimenez",
+    "age": 50,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "strength":"Picos y ataque",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"8",
+    "name":"Jordi Piñol",
+    "age": 50,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "strength":"Picos y ataque",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"9",
+    "name":"Isidro Comellas",
+    "age": 50,
+    "blade":"Butterfly",
+    "rubber":"Butterfly ",
+    "strength":"Picos y ataque",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"10",
+    "name":"Santi Casanova",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"11",
+    "name":"Ricard Franquesa",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"12",
+    "name":"Pascal Evano",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"13",
+    "name":"Alfons Blanco",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"14",
+    "name":"Enric Pellejà",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"15",
+    "name":"Joan Maria Pinyol",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"16",
+    "name":"Josep Comellas",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"17",
+    "name":"David Girbau",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  },
+  {
+    "id":"20",
+    "name":"Albert Colet",
+    "age": 30,
+    "blade":"Butterfly Kiso Hinoki IV",
+    "rubber":"Andro Rasant",
+    "strength":"Top Spin",
+    "teams":[2],
+    "default":true
+  }
+]
