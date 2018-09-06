@@ -14,6 +14,7 @@ import {AppConfig} from '../../../../config/app.config';
 })
 
 export class PlayersListPage implements OnInit {
+  nbCols: number = 4;
   players: Player[];
   error: string;
 
@@ -26,8 +27,28 @@ export class PlayersListPage implements OnInit {
     this.playerService.getPlayers().subscribe((players: Array<Player>) => {
       this.players = players;
     });
+
+    this.setGridColsByWith(document.body.clientWidth);
   }
 
+  onResize(event) {
+    const width = event.target.innerWidth;
+    this.setGridColsByWith(width);
+  }
+
+  setGridColsByWith(width){
+    if (width < 950) {
+      this.nbCols = 2;
+    }
+
+    if (width > 950) {
+      this.nbCols = 4;
+    }
+
+    if (width < 750) {
+      this.nbCols = 1;
+    }
+  }
 
   seePlayerDetails(player): void {
     if (player.default) {
@@ -36,6 +57,6 @@ export class PlayersListPage implements OnInit {
   }
 
   getTeams(player) : string{
-    return player.teams.toString();  
+    return player.teams.toString();
   }
 }

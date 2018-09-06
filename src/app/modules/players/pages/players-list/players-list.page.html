@@ -1,64 +1,16 @@
-
-<!--div fxLayout="row">
-  <div fxFlex="10" fxFlex.gt-sm="20"></div>
-  <div fxFlex="90" fxFlex.gt-sm="80">
-    <mat-progress-spinner *ngIf="!players"
-                          class="progress__spinner"
-                          [color]="'primary'"
-                          [mode]="'indeterminate'">
-    </mat-progress-spinner>
-
-    <div  *ngFor="let playerGrouped of players | groupBy:'team' | pairs">
-    <h1 class="header__title"><b>{{ playerGrouped[0]}}</b></h1>
-    <br/>
-      <ng-container *ngFor="let player of playerGrouped[1]">
-
-        <mat-card class="player-card">
-          <mat-card-header>
-            <div (click)="seePlayerDetails(player)" mat-card-avatar class="player-header__image"
-                 [ngStyle]="{'background-image': 'url(assets/images/players/' + player.id + '-thumbnail.jpg)'}"></div>
-            <mat-card-title (click)="seePlayerDetails(player)">{{player.name}}</mat-card-title>
-            <mat-card-subtitle (click)="seePlayerDetails(player)">{{player.strength}}</mat-card-subtitle>
-            <div class="flex-spacer"></div>
-
-          </mat-card-header>
-        </mat-card>
-      </ng-container>
-      <br/>
-      <br/>
-<mat-divider></mat-divider>
-    </div>
-  </div>
-  <div fxFlex="10" fxFlex.gt-sm="20"></div>
-</div-->
-
 <section class="sidenav-content">
-  <div class="content">
-    <mat-progress-spinner *ngIf="!players"
-                          class="progress__spinner"
-                          [color]="'primary'"
-                          [mode]="'indeterminate'">
-    </mat-progress-spinner>
-    <h1>  {{'Jugadores' | translate }}</h1>
-
-    <mat-card class="card-demo">
-     <mat-card-title></mat-card-title>
-     <mat-card-subtitle></mat-card-subtitle>
-     <mat-card-content>
-         <div fxLayout="row wrap" fxLayout.xs="column wrap">
-              <mat-card *ngFor="let player of players" fxFlex.gt-xs="50%" [fxFlex.gt-md]="25">
-                <mat-card-header>
-                  <div (click)="seePlayerDetails(player)" mat-card-avatar
-                       [ngStyle]="{'background-image': 'url(assets/images/players/' + player.id + '-thumbnail.jpg)'}"></div>
-                  <mat-card-title (click)="seePlayerDetails(player)">{{player.name}}</mat-card-title>
-                  <mat-card-subtitle (click)="seePlayerDetails(player)">{{getTeams(player)}}</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image class="img" (click)="seePlayerDetails(player)" src="assets/images/players/{{player.id}}.jpg">
-              </mat-card>
-         </div>
-     </mat-card-content>
-    </mat-card>
-
-
-</div>
+  <div class="content" (window:resize)="onResize($event)">
+    <mat-grid-list [cols]="nbCols" rowHeight="250px">
+          <mat-grid-tile *ngFor="let player of players" [rowspan]="1" [colspan]="1">
+            <img src="assets/images/players/{{player.id}}.jpg" alt="photo of the super player {{player.name}}">
+            <mat-grid-tile-footer>
+              <h3 mat-line>{{player.name}}</h3>
+              <span mat-line>{{player.strength}}</span>
+              <button mat-icon-button (click)="seePlayerDetails(player)">
+                <mat-icon>info</mat-icon>
+              </button>
+            </mat-grid-tile-footer>
+          </mat-grid-tile>
+        </mat-grid-list>
+  </div>
 </section>

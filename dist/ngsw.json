@@ -18,7 +18,6 @@
       "updateMode": "prefetch",
       "urls": [
         "/assets/CNAME",
-        "/assets/css/loading.css",
         "/assets/css/reset.css",
         "/assets/googled41787c6aae2151b.html",
         "/assets/i18n/en.json",
@@ -29,7 +28,10 @@
         "/assets/i18n/zh-hk.json",
         "/assets/images/404.gif",
         "/assets/images/angular.svg",
+        "/assets/images/blade.png",
         "/assets/images/github-circle-white-transparent.svg",
+        "/assets/images/news/1.jpg",
+        "/assets/images/news/2.jpg",
         "/assets/images/players/1.jpg",
         "/assets/images/players/3.jpg",
         "/assets/images/players/5.jpg",
@@ -51,7 +53,6 @@
   "dataGroups": [],
   "hashTable": {
     "/assets/CNAME": "9c4f0683cedd3eacb49584354ccc95dbb439ca48",
-    "/assets/css/loading.css": "702bd03f01fd23e914617bfc96041088d7dbc88b",
     "/assets/css/reset.css": "82d5673e122656776dfc4e78e2883974f5eb0cdc",
     "/assets/googled41787c6aae2151b.html": "a9fc98624735e71879021f130b38cf19491bb7c5",
     "/assets/i18n/en.json": "aa6e52666244c666e4eba69c41fb6105edbd030c",
@@ -62,7 +63,10 @@
     "/assets/i18n/zh-hk.json": "528104a2ec75390cb89cd236394435f877f519bd",
     "/assets/images/404.gif": "5884765f20002934d84bbe9fb8cca3a46dc1326f",
     "/assets/images/angular.svg": "765534075317a076e12de7e81a17a3d9df390a2c",
+    "/assets/images/blade.png": "41545ef7b33695d3fec0e5e61c847cdc8c00a2f6",
     "/assets/images/github-circle-white-transparent.svg": "349b787ee896c7131dbaee6a8e37e1bfff40c7e5",
+    "/assets/images/news/1.jpg": "e6229cb2e29baa3177bda7ec24d0696c278946b8",
+    "/assets/images/news/2.jpg": "b7e3bbb6f59713f554a8234b4ca03bab80aba434",
     "/assets/images/players/1.jpg": "4aecf043c5c4ecf869620959273bd715673a49e0",
     "/assets/images/players/3.jpg": "da03e964c6101be6fad14faa687ca03edd6df2cd",
     "/assets/images/players/5.jpg": "1c0833053a4e9db94441d098266001cfd3f14e15",
@@ -78,7 +82,7 @@
     "/assets/sitemap.xml": "3daf81189f9f2cde85431deeb900985908338911",
     "/assets/teams.json": "68ca16a265af8ba30ed2a29296c9888664533b46",
     "/favicon.ico": "22100de6d5d3644f25030bff36cf5a37a9b6f4ab",
-    "/index.html": "45a11a3d49c12def74331c4373e6ade5f1c65754"
+    "/index.html": "3608273a3255410962a066e8d1256819bf22242f"
   },
   "navigationUrls": [
     {
