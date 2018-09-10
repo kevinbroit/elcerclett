@@ -1,0 +1,46 @@
+{
+  "alert": "Alerta",
+  "areYouSure": "Estàs segur?",
+  "back": "Tornar",
+  "cancel": "Cancelar",
+  "cannotVote": "No puedes votar más :(",
+  "create": "Crear",
+  "createPlayer": "Afegir un jugador",
+  "createNewPlayer": "Crear nou jugador",
+  "details": "info",
+  "error404": "Error 404",
+  "errorHasOcurred": "Hi ha hagut un error",
+  "findPlayer": "Busca un jugador",
+  "goBack": "Tornar",
+  "player-create-new": {
+    "newPlayer": "Nuevo jugador"
+  },
+  "player-top": {
+    "title": "Top Jugadors"
+  },
+  "playerCreated": "Jugador creado!",
+  "playerDetail": "Detall del jugador",
+  "playersList": "Lista de jugadors",
+  "home": "Inici",
+  "language": "Idioma",
+  "name": "Nom",
+  "nameRequired": "El nom és obligatori",
+  "no": "No",
+  "noPlayer": "No hi ha jugador!",
+  "offlineMessage": "Sense connexió no podem carregar res!",
+  "remove": "Eliminar",
+  "removePlayer": "Eliminar jugador",
+  "savePlayer": "Guardar jugador",
+  "saved": "Guardado!",
+  "snapshot": "Captura",
+  "topJugadores": "Jugadors més votats",
+  "updateBrowser": "Aquestes usant un navegador antic, si us plau actualitza la versió i recarrega la pàgina.",
+  "yes": "si",
+  "players":"Jugadors",
+  "club":"L'entitat",
+  "contact":"Contacte",
+  "home":{
+    "description":"El Cercle TT Gràcia, és un club esportiu dedicat a la pràctica i promoció del tennis de taula, activitat esportiva que neix a la entitat cultural El Cercle de Gràcia, formant la secció de Tennis de Taula. Disposem de la sala 'Capella' una sala polivalent amb la possibilitat de muntar una taula amb mides reglamentàries per competir o 3 taules per entrenament, però darrerament juguem i entrenem a la veïna escola Reina Violant del carrer Badia, 29, on disposem d'un gimnàs per posar un màxim de tres taules per competir, i on juguem a la en competició de la Federació Catalana territorial de Barceolna, cada dimarts i dissabtes i els dijous entrenem",
+    "news":"Novedads"
+  }
+}

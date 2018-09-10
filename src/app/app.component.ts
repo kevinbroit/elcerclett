@@ -36,8 +36,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.translateService.setDefaultLang('es');
-    this.translateService.use('es');
+    this.translateService.setDefaultLang('ca');
+    this.translateService.use('ca');
 
     this.title.setTitle('EL CERCLE TT');
     this.router.events.subscribe((event: any) => {
@@ -56,13 +56,7 @@ export class AppComponent implements OnInit {
               content: 'Jugadores'
             });
             break;
-            case '/' + AppConfig.routes.teams:
-              this.title.setTitle('Equipos');
-              this.meta.updateTag({
-                name: 'description',
-                content: 'Equipos'
-              });
-              break;
+
         }
       }
     });

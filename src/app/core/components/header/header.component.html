@@ -16,42 +16,28 @@
               <mat-icon>public</mat-icon>
           </button>
           <mat-menu #matmenu="matMenu">
-              <button mat-menu-item (click)="changeLanguage('zh-hk')">
+              <button mat-menu-item (click)="changeLanguage('ca')">
                   <mat-icon>flag</mat-icon>
                   <span>
-                      Traditional Chinese
+                      Català
                   </span>
               </button>
-              <button mat-menu-item (click)="changeLanguage('zh-cn')">
-                  <mat-icon>flag</mat-icon>
-                  <span>
-                      Simplified Chinese
-                  </span>
-              </button>
-              <button mat-menu-item (click)="changeLanguage('en')">
-                  <mat-icon>flag</mat-icon>
-                  <span>
-                      English
-                  </span>
-              </button>
+
               <button mat-menu-item (click)="changeLanguage('es')">
                   <mat-icon>flag</mat-icon>
                   <span>
                       Español
                   </span>
               </button>
-              <button mat-menu-item (click)="changeLanguage('pt-br')">
+
+              <button mat-menu-item (click)="changeLanguage('en')">
                   <mat-icon>flag</mat-icon>
                   <span>
-                      Português
+                      English
                   </span>
               </button>
-             <button mat-menu-item (click)="changeLanguage('eu')">
-                  <mat-icon>flag</mat-icon>
-                  <span>
-                      Euskera
-                  </span>
-              </button>
+
+
           </mat-menu>
       </div>
 

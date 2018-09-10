@@ -13,6 +13,7 @@ import {TimingInterceptor} from './shared/interceptors/timing.interceptor';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {ProgressBarService} from './core/services/progress-bar.service';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import {ProgressBarService} from './core/services/progress-bar.service';
   ],
   providers: [
     {provide: APP_CONFIG, useValue: AppConfig},
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
     {provide: HTTP_INTERCEPTORS, useClass: ProgressInterceptor, multi: true, deps: [ProgressBarService]},
     {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true}
   ],

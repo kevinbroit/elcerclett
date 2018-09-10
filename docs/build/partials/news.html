@@ -1,0 +1,183 @@
+
+    <h1 id="building-angular-with-bazel">Building Angular with Bazel</h1>
+<p>Note: this doc is for developing Angular, it is <em>not</em> public
+documentation for building an Angular application with Bazel.</p>
+<p>The Bazel build tool (<a href="http://bazel.build">http://bazel.build</a>) provides fast, reliable
+incremental builds. We plan to migrate Angular&#39;s build scripts to
+Bazel.</p>
+<figure>
+  <img src='generated/images/guide/testing/initial-jasmine-html-reporter.png' alt="Jasmine HTML Reporter in the browser">
+</figure>
+
+<h2 id="installation">Installation</h2>
+<p>Install Bazel from the distribution, see <a href="https://bazel.build/versions/master/docs/install.html">install</a> instructions.
+On Mac, just <code>brew install bazel</code>.</p>
+<p>Bazel will install a hermetic version of Node, npm, and Yarn when
+you run the first build.</p>
+<h3 id="installation-of-ibazel">Installation of ibazel</h3>
+<p>Install interactive bazel runner / fs watcher via:</p>
+<pre><code>yarn global add @bazel/ibazel
+</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>The <code>WORKSPACE</code> file indicates that our root directory is a
+Bazel project. It contains the version of the Bazel rules we
+use to execute build steps, from <code>build_bazel_rules_typescript</code>.
+The sources on <a href="https://github.com/bazelbuild/rules_typescript">GitHub</a> are published from Google&#39;s internal
+repository (google3).</p>
+<p>That repository defines dependencies on specific versions of
+all the tools. You can run the tools Bazel installed, for
+example rather than <code>yarn install</code> (which depends on whatever
+version you have installed on your machine), you can
+<code>bazel run @nodejs//:yarn</code>.</p>
+<p>Bazel accepts a lot of options. We check in some options in the
+<code>.bazelrc</code> file. See the <a href="https://bazel.build/versions/master/docs/bazel-user-manual.html#bazelrc">bazelrc doc</a>. For example, if you don&#39;t
+want Bazel to create several symlinks in your project directory
+(<code>bazel-*</code>) you can add the line <code>build --symlink_prefix=/</code> to your
+<code>.bazelrc</code> file.</p>
+<h2 id="building-angular">Building Angular</h2>
+<ul>
+<li>Build a package: <code>bazel build packages/core</code></li>
+<li>Build all packages: <code>bazel build packages/...</code></li>
+</ul>
+<p>You can use <a href="https://github.com/bazelbuild/bazel-watcher">ibazel</a> to get a &quot;watch mode&quot; that continuously
+keeps the outputs up-to-date as you save sources. Note this is
+new as of May 2017 and not very stable yet.</p>
+<h2 id="testing-angular">Testing Angular</h2>
+<ul>
+<li>Test package in node: <code>bazel test packages/core/test:test</code></li>
+<li>Test package in karma: <code>bazel test packages/core/test:test_web</code></li>
+<li>Test all packages: <code>bazel test packages/...</code></li>
+</ul>
+<p>You can use <a href="https://github.com/bazelbuild/bazel-watcher">ibazel</a> to get a &quot;watch mode&quot; that continuously
+keeps the outputs up-to-date as you save sources.</p>
+<h3 id="various-flags-used-for-tests">Various Flags Used For Tests</h3>
+<p>If you&#39;re experiencing problems with seemingly unrelated tests failing, it may be because you&#39;re not using the proper flags with your Bazel test runs in Angular.</p>
+<p>See also: <a href="https://github.com/angular/angular/blob/master/tools/bazel.rc"><code>//tools/bazel.rc</code></a> where <code>--define=ivy=false</code> is defined as default.</p>
+<ul>
+<li><code>--config=debug</code>: build and launch in debug mode (see <a href="#debugging">debugging</a> instructions below)</li>
+<li><code>--define=compile=&lt;option&gt;</code> Controls if ivy or legacy mode is enabled. This is done by generating the <a href="https://github.com/angular/angular/blob/master/packages/core/src/ivy_switch.ts"><code>src/ivy_switch.ts</code></a> file from <a href="https://github.com/angular/angular/blob/master/packages/core/src/ivy_switch_legacy.ts"><code>ivy_switch_legacy.ts</code></a> (default), <a href="https://github.com/angular/angular/blob/master/packages/core/src/ivy_switch_jit.ts"><code>ivy_switch_jit.ts</code></a>, or <a href="https://github.com/angular/angular/blob/master/packages/core/src/ivy_switch_local.ts"><code>ivy_switch_local.ts</code></a>.<ul>
+<li><code>legacy</code>: (default behavior) compile against View Engine, e.g. <code>--define=compile=legacy</code></li>
+<li><code>jit</code>: Compile in ivy JIT mode, e.g. <code>--define=compile=jit</code></li>
+<li><code>local</code>: Compile in ivy AOT move, e.g. <code>--define=compile=local</code></li>
+</ul>
+</li>
+<li><code>--test_tag_filters=&lt;tag&gt;</code>: filter tests down to tags defined in the <code>tag</code> config
+of your rules in any given <code>BUILD.bazel</code>.<ul>
+<li><code>ivy-jit</code>: This flag should be set for tests that should be excuted with ivy JIT, e.g. <code>--test_tag_filters=ivy-jit</code>. For this, you may have to include <code>--define=compile=jit</code>.</li>
+<li><code>ivy-local</code>: Only run tests that have to do with ivy AOT. For this, you may have to include <code>--define=compile=local</code>, e.g. <code>--test_tag_filters=ivy-local</code>..</li>
+<li><code>ivy-only</code>: Only run ivy related tests, e.g. <code>--test_tag_filters=ivy-only</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="debugging-a-node-test">Debugging a Node Test</h3>
+<p><a id="debugging"></a></p>
+<ul>
+<li>Open chrome at: <a href="chrome://inspect">chrome://inspect</a></li>
+<li>Click on  <code>Open dedicated DevTools for Node</code> to launch a debugger.</li>
+<li>Run test: <code>bazel test packages/core/test:test --config=debug</code></li>
+</ul>
+<p>The process should automatically connect to the debugger.</p>
+<h3 id="debugging-a-node-test-in-vscode">Debugging a Node Test in VSCode</h3>
+<p>First time setup:</p>
+<ul>
+<li>Go to Debug &gt; Add configuration (in the menu bar) to open <code>launch.json</code></li>
+<li>Add the following to the <code>configurations</code> array:</li>
+</ul>
+<pre><code class="lang-json">{
+    &quot;name&quot;: &quot;Attach (inspect)&quot;,
+    &quot;type&quot;: &quot;node&quot;,
+    &quot;request&quot;: &quot;attach&quot;,
+    &quot;port&quot;: 9229,
+    &quot;address&quot;: &quot;localhost&quot;,
+    &quot;restart&quot;: false,
+    &quot;sourceMaps&quot;: true,
+    &quot;localRoot&quot;: &quot;${workspaceRoot}&quot;,
+    &quot;remoteRoot&quot;: null
+},
+{
+    &quot;name&quot;: &quot;Attach (no-sm,inspect)&quot;,
+    &quot;type&quot;: &quot;node&quot;,
+    &quot;request&quot;: &quot;attach&quot;,
+    &quot;port&quot;: 9229,
+    &quot;address&quot;: &quot;localhost&quot;,
+    &quot;restart&quot;: false,
+    &quot;sourceMaps&quot;: false,
+    &quot;localRoot&quot;: &quot;${workspaceRoot}&quot;,
+    &quot;remoteRoot&quot;: null
+},
+</code></pre>
+<p><strong>Setting breakpoints directly in your code files may not work in VSCode</strong>. This is because the files you&#39;re actually debugging are built files that exist in a <code>./private/...</code> folder.
+The easiest way to debug a test for now is to add a <code>debugger</code> statement in the code
+and launch the bazel corresponding test (<code>bazel test &lt;target&gt; --config=debug</code>).</p>
+<p>Bazel will wait on a connection. Go to the debug view (by clicking on the sidebar or
+Apple+Shift+D on Mac) and click on the green play icon next to the configuration name
+(ie <code>Attach (inspect)</code>).</p>
+<h3 id="debugging-a-karma-test">Debugging a Karma Test</h3>
+<ul>
+<li>Run test: <code>bazel run packages/core/test:test_web</code></li>
+<li>Open chrome at: <a href="http://localhost:9876/debug.html">http://localhost:9876/debug.html</a></li>
+<li>Open chrome inspector</li>
+</ul>
+<h3 id="debugging-bazel-rules">Debugging Bazel rules</h3>
+<p>Open <code>external</code> directory which contains everything that bazel downloaded while executing the workspace file:</p>
+<pre><code class="lang-sh">open $(bazel info output_base)/external
+</code></pre>
+<p>See subcommands that bazel executes (helpful for debugging):</p>
+<pre><code class="lang-sh">bazel build //packages/core:package -s
+</code></pre>
+<p>To debug nodejs_binary executable paths uncomment <code>find . -name rollup 1&gt;&amp;2</code> (~ line 96) in</p>
+<pre><code class="lang-sh">open $(bazel info output_base)/external/build_bazel_rules_nodejs/internal/node_launcher.sh
+</code></pre>
+<h2 id="stamping">Stamping</h2>
+<p>Bazel supports the ability to include non-hermetic information from the version control system in built artifacts. This is called stamping.
+You can see an overview at <a href="https://www.kchodorow.com/blog/2017/03/27/stamping-your-builds/">https://www.kchodorow.com/blog/2017/03/27/stamping-your-builds/</a>
+In our repo, here is how it&#39;s configured:</p>
+<p>1) In <code>tools/bazel_stamp_vars.sh</code> we run the <code>git</code> commands to generate our versioning info.
+1) In <code>tools/bazel.rc</code> we register this script as the value for the <code>workspace_status_command</code> flag. Bazel will run the script when it needs to stamp a binary.</p>
+<p>Note that Bazel has a <code>--stamp</code> argument to <code>bazel build</code>, but this has no effect since our stamping takes place in Skylark rules. See <a href="https://github.com/bazelbuild/bazel/issues/1054">https://github.com/bazelbuild/bazel/issues/1054</a></p>
+<h2 id="remote-cache">Remote cache</h2>
+<p>Bazel supports fetching action results from a cache, allowing a clean build to pick up artifacts from prior builds.
+This makes builds incremental, even on CI.
+It works because Bazel assigns a content-based hash to all action inputs, which is used as the cache key for the action outputs.
+Thanks to the hermeticity property, we can skip executing an action if the inputs hash is already present in the cache.</p>
+<p>Of course, non-hermeticity in an action can cause problems.
+At worst, you can fetch a broken artifact from the cache, making your build non-reproducible.
+For this reason, we are careful to implement our Bazel rules to depend only on their inputs.</p>
+<p>Currently we only use remote caching on CircleCI.
+We could enable it for developer builds as well, which would make initial builds much faster for developers by fetching already-built artifacts from the cache.</p>
+<p>This feature is experimental, and developed by the CircleCI team with guidance from Angular.
+Contact Alex Eagle with questions.</p>
+<p><em>How it&#39;s configured</em>:</p>
+<ol>
+<li>In <code>.circleci/config.yml</code>, each CircleCI job downloads a proxy binary, which is built from <a href="https://github.com/notnoopci/bazel-remote-proxy">https://github.com/notnoopci/bazel-remote-proxy</a>. The download is done by running <code>.circleci/setup_cache.sh</code>. When the feature graduates from experimental, this proxy will be installed by default on every CircleCI worker, and this step will not be needed.</li>
+<li>Next, each job runs the <code>setup-bazel-remote-cache</code> anchor. This starts up the proxy running in the background. In the CircleCI UI, you&#39;ll see this step continues running while later steps run, and you can see logging from the proxy process.</li>
+<li>Bazel must be configured to connect to the proxy on a local port. This configuration lives in <code>.circleci/bazel.rc</code> and is enabled because we overwrite the system Bazel settings in /etc/bazel.bazelrc with this file.</li>
+<li>Each <code>bazel</code> command in <code>.circleci/config.yml</code> picks up and uses the caching flags.</li>
+</ol>
+<h2 id="known-issues">Known issues</h2>
+<h3 id="webstorm">Webstorm</h3>
+<p>The autocompletion in WebStorm can be added via a Bazel plugin intended for IntelliJ IDEA, but the plugin needs to be installed in a special way.
+See <a href="https://github.com/bazelbuild/intellij/issues/246">bazelbuild/intellij#246</a> for more info.</p>
+<h3 id="xcode">Xcode</h3>
+<p>If you see the following error:</p>
+<pre><code>$ bazel build packages/...
+ERROR: /private/var/tmp/[...]/external/local_config_cc/BUILD:50:5: in apple_cc_toolchain rule @local_config_cc//:cc-compiler-darwin_x86_64: Xcode version must be specified to use an Apple CROSSTOOL
+ERROR: Analysis of target &#39;//packages/core/test/render3:render3&#39; failed; build aborted: Analysis of target &#39;@local_config_cc//:cc-compiler-darwin_x86_64&#39; failed; build aborted
+</code></pre>
+<p>It might be linked to an interaction with VSCode.
+If closing VSCode fixes the issue, you can add the following line to your VSCode configuration:</p>
+<pre><code>&quot;files.exclude&quot;: {&quot;bazel-*&quot;: true}
+</code></pre>
+<p>source: <a href="https://github.com/bazelbuild/bazel/issues/4603">https://github.com/bazelbuild/bazel/issues/4603</a></p>
+<p>If VSCode is not the root cause, you might try:</p>
+<ul>
+<li>Quit VSCode (make sure no VSCode is running).</li>
+</ul>
+<pre><code>bazel clean --expunge
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+sudo xcodebuild -license
+bazel build //packages/core    # Run a build outside VSCode to pre-build the xcode; then safe to run VSCode
+</code></pre>
+<p>Source: <a href="https://stackoverflow.com/questions/45276830/xcode-version-must-be-specified-to-use-an-apple-crosstool">https://stackoverflow.com/questions/45276830/xcode-version-must-be-specified-to-use-an-apple-crosstool</a></p>
+
+
