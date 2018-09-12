@@ -1,0 +1,20 @@
+
+<h1>{{"home.news" | translate }}</h1>
+<hr />
+
+<div fxLayout="column" fxLayoutAlign=" none">
+<div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="space-around stretch" fxLayout.xs="column">
+
+<mat-card fxFlex.xs="100" fxFlex.sm="50" fxFlex.md="50" fxFlex.lg="33" fxFlex.xl="33"  *ngFor="let nw of news">
+  <mat-card-content>
+    <img mat-card-image src="assets/images/news/1.jpg">
+
+</mat-card-content>
+<mat-card-footer>
+  <div class="text-headline"> {{nw.title}}</div>
+  <p class="text-body">Desc: {{nw.title}}
+</mat-card-footer>
+</mat-card>
+</div>
+
+</div>

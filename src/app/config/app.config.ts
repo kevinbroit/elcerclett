@@ -8,11 +8,14 @@ export const AppConfig: IAppConfig = {
   routes: {
     players: 'players',
     teams:'teams',
+    news:'news',
+    contact:'contact',
     error404: '404'
   },
   endpoints: {
     players:'./assets/players.json',
-    teams:'./assets/teams.json'
+    teams:'./assets/teams.json',
+    news:'./assets/news.json'
     //players: 'https://elcercle.tk/api.php/players'
   },
   repositoryURL:'',

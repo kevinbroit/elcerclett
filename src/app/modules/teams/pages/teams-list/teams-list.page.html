@@ -1,33 +1,16 @@
-
-<div fxLayout="row">
-  <div fxFlex="10" fxFlex.gt-sm="20"></div>
-  <div fxFlex="90" fxFlex.gt-sm="80">
-    <mat-progress-spinner *ngIf="!teams"
-                          class="progress__spinner"
-                          [color]="'primary'"
-                          [mode]="'indeterminate'">
-    </mat-progress-spinner>
-
-    <div  *ngFor="let teamGrouped of teams | groupBy:'team' | pairs">
-    <h1 class="header__title"><b>{{ teamGrouped[0]}}</b></h1>
-    <br/>
-      <ng-container *ngFor="let team of teamGrouped[1]">
-
-        <mat-card class="team-card">
-          <mat-card-header>
-            <div (click)="seePlayerDetails(team)" mat-card-avatar class="team-header__image"
-                 [ngStyle]="{'background-image': 'url(assets/images/teams/' + team.id + '-thumbnail.jpg)'}"></div>
-            <mat-card-title (click)="seePlayerDetails(team)">{{team.name}}</mat-card-title>
-            <mat-card-subtitle (click)="seePlayerDetails(team)">{{team.strength}}</mat-card-subtitle>
-            <div class="flex-spacer"></div>
-
-          </mat-card-header>
-        </mat-card>
-      </ng-container>
-      <br/>
-      <br/>
-<mat-divider></mat-divider>
-    </div>
+<section class="sidenav-content">
+  <div class="content" (window:resize)="onResize($event)">
+    <mat-grid-list [cols]="nbCols" rowHeight="250px">
+          <mat-grid-tile *ngFor="let player of players" [rowspan]="1" [colspan]="1">
+            <img src="assets/images/players/{{player.id}}.jpg" alt="photo of the super player {{player.name}}">
+            <mat-grid-tile-footer>
+              <h3 mat-line>{{player.name}}</h3>
+              <span mat-line>{{player.strength}}</span>
+              <button mat-icon-button (click)="seePlayerDetails(player)">
+                <mat-icon>info</mat-icon>
+              </button>
+            </mat-grid-tile-footer>
+          </mat-grid-tile>
+        </mat-grid-list>
   </div>
-  <div fxFlex="10" fxFlex.gt-sm="20"></div>
-</div>
+</section>

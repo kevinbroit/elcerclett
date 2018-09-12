@@ -43,8 +43,8 @@ export class HeaderComponent implements OnInit {
 
   private loadMenus(): void {
     this.menuItems = [
-      {link: '/' + AppConfig.routes.players, name: _('players')},
-      {link: '/' + AppConfig.routes.players, name: _('contact')}
+      {link: '/' + AppConfig.routes.teams, name: _('teams')},
+      {link: '/' + AppConfig.routes.contact, name: _('contact')}
     ];
   }
 }

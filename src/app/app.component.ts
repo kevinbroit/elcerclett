@@ -38,29 +38,29 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.translateService.setDefaultLang('ca');
     this.translateService.use('ca');
+    /*this.title.setTitle( _('clubName').toString());
 
-    this.title.setTitle('EL CERCLE TT');
     this.router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
         switch (event.urlAfterRedirects) {
           case '/':
             this.meta.updateTag({
               name: 'description',
-              content: 'EL CERCLE TT'
+              content: _('clubName').toString()
             });
             break;
-          case '/' + AppConfig.routes.players:
-            this.title.setTitle('Jugadores');
+          case '/' + AppConfig.routes.teams:
+            this.title.setTitle(_('teams').toString());
             this.meta.updateTag({
               name: 'description',
-              content: 'Jugadores'
+              content: _('teams').toString()
             });
             break;
 
         }
       }
     });
-
+*/
     this.checkBrowserFeatures();
   }
 

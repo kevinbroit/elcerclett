@@ -6,6 +6,9 @@ import {Router} from '@angular/router';
 import {LoggerService} from '../../../../core/services/logger.service';
 import {AppConfig} from '../../../../config/app.config';
 
+import {Player} from '../../../players/shared/player.model';
+import {PlayerService} from '../../../players/shared/player.service';
+
 
 @Component({
   selector: 'app-teams-list',
@@ -14,24 +17,49 @@ import {AppConfig} from '../../../../config/app.config';
 })
 
 export class TeamsListPage implements OnInit {
-  teams: Team[];
+  nbCols: number = 4;
+  players: Player[];
   error: string;
 
-  constructor(private teamService: TeamService,
+  constructor(private playerService: PlayerService,
               private dialog: MatDialog,
               private router: Router ){
   }
 
   ngOnInit() {
-    this.teamService.getTeams().subscribe((teams: Array<Team>) => {
-      this.teams = teams;
+    this.playerService.getPlayers().subscribe((players: Array<Player>) => {
+      this.players = players;
     });
+
+    this.setGridColsByWith(document.body.clientWidth);
   }
 
+  onResize(event) {
+    const width = event.target.innerWidth;
+    this.setGridColsByWith(width);
+  }
 
-  seeTeamDetails(team): void {
-    if (team.default) {
-      this.router.navigate([AppConfig.routes.teams + '/' + team.id]);
+  setGridColsByWith(width){
+    if (width < 950) {
+      this.nbCols = 2;
     }
+
+    if (width > 950) {
+      this.nbCols = 4;
+    }
+
+    if (width < 750) {
+      this.nbCols = 1;
+    }
+  }
+
+  seePlayerDetails(player): void {
+    if (player.default) {
+      this.router.navigate([AppConfig.routes.players + '/' + player.id]);
+    }
+  }
+
+  getTeams(player) : string{
+    return player.teams.toString();
   }
 }

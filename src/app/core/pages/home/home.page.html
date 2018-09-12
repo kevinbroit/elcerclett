@@ -1,23 +1,8 @@
 <section class="sidenav-content">
   <h1>{{"club" | translate }}</h1>
-  <p>
-  {{"home.description" | translate }}
-  </p>
+  <hr/>
 
-    <h1>{{"home.news" | translate }}</h1>
-  <div fxLayout="row" fxLayout.lt-mat="column" fxLayoutGap="30px" >
-    <div  fxFlex.lg="33.33" fxFlex.mat="40" fxFlex.sm="100" >
-      <mat-card>
-        <mat-card-content>
-          <img mat-card-image  style="max-height: 293px"  src="assets/images/news/1.jpg">
-          <p></p>
-       <div class="user-detail">
-          <span  class="toolbar-avatar mat user-photo"></span>
-           <span  class="user-title">Kevin Broit</span>
-           <span  class="user-subtitle text-muted">Product Manager</span>
-         </div>
-     </mat-card-content>
-   </mat-card>
-     </div>
-   </div>
+  <p>{{"home.description" | translate }}</p>
+  <br />
+  <app-news-list></app-news-list>
 </section>

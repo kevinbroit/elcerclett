@@ -7,34 +7,50 @@ import {RouterModule} from '@angular/router';
 import {ProgressBarService} from './services/progress-bar.service';
 import {LoggerService} from './services/logger.service';
 import {HomePage} from './pages/home/home.page';
+import {ContactPage } from './pages/contact/contact.page';
+
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
+import {NewsListComponent} from './components/news-list/news-list.component';
+
 import {Error404Page} from './pages/error404/error404.page';
 import {SearchBarComponent} from './components/search-bar/search-bar.component';
 import {PlayerService} from '../modules/players/shared/player.service';
 import {TeamService} from '../modules/teams/shared/team.service';
+import {NewsService} from '../modules/news/shared/news.service';
+
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   imports: [
     ReactiveFormsModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    AgmCoreModule.forRoot({
+     apiKey: 'AIzaSyBYYjKL3SbCMAXvHhWnfpwqxkecy'
+   })
   ],
   declarations: [
     HomePage,
+    ContactPage,
     Error404Page,
     HeaderComponent,
     SearchBarComponent,
-    FooterComponent
+    FooterComponent,
+    NewsListComponent,
+
   ],
   exports: [
     HeaderComponent,
     SearchBarComponent,
-    FooterComponent
+    FooterComponent,
+    NewsListComponent
   ],
   providers: [
     PlayerService,
     TeamService,
+    NewsService,
     LoggerService,
     ProgressBarService
   ]

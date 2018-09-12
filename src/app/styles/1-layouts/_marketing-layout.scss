@@ -193,7 +193,7 @@ section#intro {
   @include card(70%, auto);
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: left;
   position: relative;
   width: 70%;
   min-width: 350px;
@@ -240,7 +240,7 @@ section#intro {
 
   &:hover {
     h2 {
-      color: $blue;
+      color: $black;
     }
   }
 }
@@ -340,7 +340,7 @@ aio-shell:not(.view-SideNav) {
 
 div[layout=row]{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     box-sizing: border-box;
 
@@ -367,7 +367,6 @@ div[layout=row]{
 
 .home-row {
   max-width: 920px;
-  margin: 32px auto;
 
   .promo-img-container, .text-container {
     max-width: 50%;
