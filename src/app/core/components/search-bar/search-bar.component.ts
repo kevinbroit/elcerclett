@@ -21,6 +21,7 @@ export class SearchBarComponent implements OnInit {
   defaultPlayers: Array<Player>;
   playerFormControl: FormControl;
   filteredPlayers: any;
+  isSearchBarVisible : boolean;
 
   constructor(private playerService: PlayerService,
               private router: Router) {

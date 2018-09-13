@@ -19,12 +19,12 @@ export class HeaderComponent implements OnInit {
   progressBarMode: string;
   currentLang: string;
 
+
   constructor(@Inject(APP_CONFIG) appConfig: IAppConfig,
               private progressBarService: ProgressBarService,
               private translateService: TranslateService) {
     this.appConfig = appConfig;
-    this.title = 'EL CERCLE TT';
-
+    this.title = 'El Cercle TT';
   }
 
   ngOnInit() {

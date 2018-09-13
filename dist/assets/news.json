@@ -1,0 +1,20 @@
+[
+  {
+  "id":1,
+  "title":"LOS CAMPEONES DEL FUTURO",
+  "subtitle":"Los jovenes del club y su primer contacto con el TT!",
+  "content":"<p>El Cercle ha organizado un torneo invitando a los jovenes de nuestra institución a animarse a jugar TT</p>",
+  "author":"Kevin Broit",
+  "order":1,
+  "visible":true
+  },
+  {
+  "id":2,
+  "title":"LOS CAMPEONES DEL PRESENTE",
+  "subtitle":"Un paso grande para nuestros veteranos",
+  "content":"<p>El equipo de 2da Veteranos ha ascendido a primera !</p>",
+  "author":"Kevin Broit",
+  "order":2,
+  "visible":true
+  }
+]
