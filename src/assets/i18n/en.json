@@ -7,6 +7,9 @@
   "create": "Create",
   "createPlayer": "Create a player",
   "createNewPlayer": "Create new player",
+  "club":"The Club",
+  "clubName":"El Cercle TT",
+  "contact":"Contact",
   "details": "details",
   "error404": "404 Error",
   "errorHasOcurred": "An error has ocurred",
@@ -39,7 +42,6 @@
   "updateBrowser": "You are using an old browser, please update it and reload the page.",
   "yes": "Yes",
   "players":"Players",
-  "contact":"Contact",
   "home":{
     "description": "The Cercle TT Gràcia, is a sports club dedicated to the practice and promotion of table tennis, sports activity that is born to the cultural entity El Circulo de Gracia, forming the Table Tennis section. We have the room 'Capella', a multipurpose room with the possibility of setting a table with the regulatory measures to compete or 3 tables to train, but we also play and train in the neighboring school Reina Violant Badia carrer, 29, where we have a gym to put up a maximum of three tables to compete, and where we play the competition of the Catalan territorial Federation of Barcelona.",
   "news":"News"

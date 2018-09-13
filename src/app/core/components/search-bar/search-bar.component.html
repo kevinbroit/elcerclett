@@ -1,5 +1,5 @@
 
-  <mat-form-field id="search-input" fxShow="false" fxShow.gt-sm>
+  <mat-form-field id="search-input" fxShow="false" fxShow.gt-sm *ngIf="isSearchBarVisible">
     <input matInput placeholder="{{ 'findPlayer' | translate }}!"
            [matAutocomplete]="playersAutocomplete" [formControl]="playerFormControl">
 </mat-form-field>

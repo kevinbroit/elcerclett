@@ -18,6 +18,7 @@ declare const Modernizr;
 export class AppComponent implements OnInit {
 
   isOnline: boolean;
+  isSearchBarVisible :boolean = false;
 
   constructor(private translateService: TranslateService,
               private title: Title,
@@ -33,14 +34,16 @@ export class AppComponent implements OnInit {
       "tt",
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/images/tt.svg")
     );
+
   }
 
   ngOnInit() {
     this.translateService.setDefaultLang('ca');
     this.translateService.use('ca');
-    /*this.title.setTitle( _('clubName').toString());
+    //this.title.setTitle( _('clubName').toString());
 
     this.router.events.subscribe((event: any) => {
+      this.isSearchBarVisible = false;
       if (event instanceof NavigationEnd) {
         switch (event.urlAfterRedirects) {
           case '/':
@@ -50,6 +53,7 @@ export class AppComponent implements OnInit {
             });
             break;
           case '/' + AppConfig.routes.teams:
+            this.isSearchBarVisible = true;
             this.title.setTitle(_('teams').toString());
             this.meta.updateTag({
               name: 'description',
@@ -60,7 +64,7 @@ export class AppComponent implements OnInit {
         }
       }
     });
-*/
+
     this.checkBrowserFeatures();
   }
 

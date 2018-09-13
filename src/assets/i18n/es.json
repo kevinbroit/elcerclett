@@ -2,9 +2,11 @@
   "alert": "Alerta",
   "areYouSure": "Estás seguro?",
   "back": "Volver",
-  "clubName":"El Cercle TT",
   "cancel": "Cancelar",
   "cannotVote": "No puedes votar más :(",
+  "club":"La Entitad",
+  "clubName":"El Cercle TT",
+  "contact":"Contacto",
   "create": "Crear",
   "createPlayer": "Elegir un jugador",
   "createNewPlayer": "Crear nuevo jugador",
@@ -40,8 +42,6 @@
   "updateBrowser": "Está usando un navegador antiguo, por favor actualiza el navegador y recarga la página.",
   "yes": "si",
   "players":"Jugadores",
-  "club":"La Entitad",
-  "contact":"Contacto",
   "home":{
     "description":"El Cercle TT Gràcia, es un club desportivo dedicado a la practica y promoción del tenis de mesa, actividad deportiva que nace a la entidad cultural El Circulo de Gracia, formando la sección de Tenis de Mesa. Disponemos de la sala 'Capella', una sala polivalente con la possibilitad de montar una mesa con las medidas reglamentarias para competir ó 3 mesas para entrenar, pero además jugamos y entrenamos en la vecina escuela Reina Violant del carrer Badia, 29, donde disponemos de un gimnasio para poner un màximo de tres mesas para competir, y donde jugamos la competición de la Federación Catalana territorial de Barcelona.",
     "news":"Novedades"
