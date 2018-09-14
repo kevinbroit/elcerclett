@@ -25,4 +25,8 @@ export class NewsListComponent implements OnInit {
       this.news = news;
     });
   }
+
+  seeNewsDetails(news): void {
+      this.router.navigate([AppConfig.routes.news + '/' + news.id]);
+  }
 }

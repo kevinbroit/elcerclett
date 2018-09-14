@@ -4,13 +4,13 @@
 
 <div fxLayout="column" fxLayoutAlign=" none">
   <div fxFlex="100"  fxLayoutGap="10px" fxLayout="row wrap" fxLayoutAlign="stretch" fxLayout.xs="column">
-    <mat-card fxFlex.xs="100" fxFlex.sm="48" fxFlex.md="48" fxFlex.lg="33" fxFlex.xl="33"  *ngFor="let item of news">
+    <mat-card fxFlex.xs="100" fxFlex.sm="48" fxFlex.md="48" fxFlex.lg="33" fxFlex.xl="33"  *ngFor="let item of news" (click)="seeNewsDetails(item)">
       <mat-card-content>
         <h1>{{item.title}}</h1>
         <p>{{item.subtitle}}</p>
     </mat-card-content>
-    <img mat-card-image src="assets/images/news/{{item.id}}.jpg">
-    <mat-card-footer> 
+    <img mat-card-image src="assets/images/news/{{item.id}}/1.jpg">
+    <mat-card-footer>
       <p>Author: {{item.author}}</p>
     </mat-card-footer>
     </mat-card>

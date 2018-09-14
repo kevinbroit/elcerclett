@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
               private progressBarService: ProgressBarService,
               private translateService: TranslateService) {
     this.appConfig = appConfig;
-    this.title = 'El Cercle TT';
+    this.title = 'El CERCLE';
   }
 
   ngOnInit() {

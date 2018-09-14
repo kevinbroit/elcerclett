@@ -11,6 +11,7 @@ const routes: Routes = [
   {path: AppConfig.routes.contact, component: ContactPage},
   {path: AppConfig.routes.error404, component: Error404Page},
   {path: AppConfig.routes.players, loadChildren: './modules/players/players.module#PlayersModule'},
+  {path: AppConfig.routes.news, loadChildren: './modules/news/news.module#NewsModule'},
   {path: AppConfig.routes.teams, loadChildren: './modules/teams/teams.module#TeamsModule'},
 
 
