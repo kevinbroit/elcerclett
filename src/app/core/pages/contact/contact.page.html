@@ -1,8 +1,39 @@
 <section class="sidenav-content">
-  <h1>{{"contact" | translate }}</h1>
+  <h1>{{"contact.title" | translate }}</h1>
+  <hr />
+  <article>
+      <table class="is-full-width">
+        <thead>
+        <tr>
+          <th>{{"contact.person" | translate}}</th>
+          <th>{{"contact.phone" | translate}}</th>
+          <th>{{"contact.email" | translate}}</th>
+        </tr>
+        </thead>
+        <tbody>
 
+        <tr>
+          <th>Jesus Monera</th>
+          <td>+34 600 241 428</td>
+          <td><a href="mailto:jesusmonera@elcercle.cat">jesusmonera@elcercle.cat</a></td>
+        </tr>
 
-  <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
+        <tr>
+          <th>Kevin Broit</th>
+          <td>+34 631 980 235</td>
+          <td><a href="mailto:kevinbroit@msn.com">kevinbroit@msn.com</a></td>
+        </tr>
+      </tbody>
+      </table>
+  </article>
+
+  <br />
+  <h1>{{"club" | translate}}</h1>
+  <hr />
+  <div id="cc-m-map-4264287063">
+    <div class="cc-map-wrapper" style="height: 400px;">
+                <iframe class="cc-map-embed-iframe" width="100%" height="400" frameborder="0" style="border: 0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBs_lAfpuIjfx7DGisR7oUh1ZZ_C5qtGKc&amp;q=41.4037466%2C2.1529456&amp;center=41.40349112720823%2C2.1527838707&amp;zoom=17&amp;maptype=roadmap" allowfullscreen="true">
+        </iframe>
+    </div>
+</div>
 </section>
