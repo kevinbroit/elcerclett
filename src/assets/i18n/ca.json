@@ -8,13 +8,14 @@
   "createPlayer": "Afegir un jugador",
   "createNewPlayer": "Crear nou jugador",
   "club":"L'entitat",
-  "clubName":"El Cercle",
+  "clubName":"el cercle | tennis taula",
   "contact":"Contacte",
   "details": "info",
   "error404": "Error 404",
   "errorHasOcurred": "Hi ha hagut un error",
   "findPlayer": "Busca un jugador",
   "goBack": "Tornar",
+  "photos":"Fotos",
   "player-create-new": {
     "newPlayer": "Nuevo jugador"
   },

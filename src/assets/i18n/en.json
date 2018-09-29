@@ -8,13 +8,14 @@
   "createPlayer": "Create a player",
   "createNewPlayer": "Create new player",
   "club":"The Club",
-  "clubName":"El Cercle",
+  "clubName":"el cercle | tennis taula",
   "contact":"Contact",
   "details": "details",
   "error404": "404 Error",
   "errorHasOcurred": "An error has ocurred",
   "findPlayer": "Look for a player",
   "goBack": "Go back",
+  "photos":"Photos",
   "player-create-new": {
     "newPlayer": "New player"
   },

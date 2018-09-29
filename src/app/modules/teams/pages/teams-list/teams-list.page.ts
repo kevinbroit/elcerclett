@@ -5,10 +5,8 @@ import {MatDialog} from '@angular/material';
 import {Router} from '@angular/router';
 import {LoggerService} from '../../../../core/services/logger.service';
 import {AppConfig} from '../../../../config/app.config';
-
 import {Player} from '../../../players/shared/player.model';
 import {PlayerService} from '../../../players/shared/player.service';
-
 
 @Component({
   selector: 'app-teams-list',

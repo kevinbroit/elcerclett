@@ -45,5 +45,19 @@
   "home":{
     "description": "The Cercle TT Gràcia, is a sports club dedicated to the practice and promotion of table tennis, sports activity that is born to the cultural entity El Circulo de Gracia, forming the Table Tennis section. We have the room 'Capella', a multipurpose room with the possibility of setting a table with the regulatory measures to compete or 3 tables to train, but we also play and train in the neighboring school Reina Violant Badia carrer, 29, where we have a gym to put up a maximum of three tables to compete, and where we play the competition of the Catalan territorial Federation of Barcelona.",
   "news":"News"
-  }
+  },
+  "contact":{
+          "title":"Contact",
+      "days":"Days",
+      "location":"Location",
+      "time":"Time",
+      "person":"Contact",
+      "phone":"Phone",
+      "email":"Email",
+      "information":"Conctact members"
+  },
+  "tuesday":"Tuesday",
+  "thursday":"Thursday",
+  "trainings":"Trainings",
+  "trainingAddress":"School Reina Violant: c/Badia , 29"
 }

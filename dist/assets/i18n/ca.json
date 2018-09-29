@@ -45,5 +45,19 @@
   "home":{
     "description":"El Cercle TT Gràcia, és un club esportiu dedicat a la pràctica i promoció del tennis de taula, activitat esportiva que neix a la entitat cultural El Cercle de Gràcia, formant la secció de Tennis de Taula. Disposem de la sala 'Capella' una sala polivalent amb la possibilitat de muntar una taula amb mides reglamentàries per competir o 3 taules per entrenament, però darrerament juguem i entrenem a la veïna escola Reina Violant del carrer Badia, 29, on disposem d'un gimnàs per posar un màxim de tres taules per competir, i on juguem a la en competició de la Federació Catalana territorial de Barceolna, cada dimarts i dissabtes i els dijous entrenem",
     "news":"Novedads"
-  }
+  },
+  "contact":{
+      "title":"Contacte",
+      "days":"Dies",
+      "location":"Ubicació",
+      "time":"Horari",
+      "person":"Contacte",
+      "phone":"Telèfon",
+      "email":"Email",
+      "information":"Contacte"
+  },
+  "tuesday":"Dimarts",
+  "thursday":"Dijous",
+  "trainings":"Entrenaments",
+  "trainingAddress":"Escola Reina Violant: c/Badia , 29"
 }

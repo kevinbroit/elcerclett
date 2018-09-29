@@ -15,6 +15,7 @@ import {environment} from '../environments/environment';
 import {ProgressBarService} from './core/services/progress-bar.service';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
+
 @NgModule({
   imports: [
     BrowserModule,

@@ -51,13 +51,13 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/assets/CNAME": "9c4f0683cedd3eacb49584354ccc95dbb439ca48",
+    "/assets/CNAME": "5a248ffac96a29ce3102557222a7681a91e3b111",
     "/assets/css/BAZEL.md": "32cd978fd9f6fce7f4729bf1ed009a252ed0810d",
     "/assets/css/reset.css": "82d5673e122656776dfc4e78e2883974f5eb0cdc",
     "/assets/googled41787c6aae2151b.html": "a9fc98624735e71879021f130b38cf19491bb7c5",
-    "/assets/i18n/ca.json": "9c7fb1d86980c3d198340a841545691d5e0c681c",
-    "/assets/i18n/en.json": "711d1f0066969de2dc277b3391089606bb068838",
-    "/assets/i18n/es.json": "720e6fda7db9cbbced1e8ad74854c8c32a13e9f1",
+    "/assets/i18n/ca.json": "a4c359ce798fa5f0d5cb2722c2183912fb4734fe",
+    "/assets/i18n/en.json": "86fd06008e8eb215815eb119f97b30d1da7aff41",
+    "/assets/i18n/es.json": "1f834ad641c53b345c7eed3c154a37176c80e01b",
     "/assets/images/404.gif": "5884765f20002934d84bbe9fb8cca3a46dc1326f",
     "/assets/images/angular.svg": "765534075317a076e12de7e81a17a3d9df390a2c",
     "/assets/images/blade.png": "41545ef7b33695d3fec0e5e61c847cdc8c00a2f6",
@@ -77,10 +77,10 @@
     "/assets/js/modernizr.js": "150b77e7d9c4fd1be99e62508a151c197ea906a7",
     "/assets/news.json": "2bf8232a9ae43b9b80ccf34064e77b50d4210eba",
     "/assets/players.json": "1b7580e082863bcb9ef14011fdc0e70f9d3af983",
-    "/assets/sitemap.xml": "3daf81189f9f2cde85431deeb900985908338911",
+    "/assets/sitemap.xml": "d62d46bc8532afef8af9cecfd1aedd1f27e73fee",
     "/assets/teams.json": "68ca16a265af8ba30ed2a29296c9888664533b46",
     "/favicon.ico": "22100de6d5d3644f25030bff36cf5a37a9b6f4ab",
-    "/index.html": "dd19a88b3956ece860e9b1830210e962ef2dd983"
+    "/index.html": "5d2317a1939a1959bb9bc60d9558f843f380b6ea"
   },
   "navigationUrls": [
     {

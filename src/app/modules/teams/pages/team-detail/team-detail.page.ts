@@ -4,6 +4,7 @@ import {TeamService} from '../../shared/team.service';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
+
 @Component({
   selector: 'app-team-detail',
   templateUrl: './team-detail.page.html',

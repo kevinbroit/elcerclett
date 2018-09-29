@@ -8,12 +8,14 @@ import {PlayersListPage} from './pages/players-list/players-list.page';
 import {PlayerDetailPage} from './pages/player-detail/player-detail.page';
 
 
+
 @NgModule({
   imports: [
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
     PlayerRoutingModule
+    
   ],
   declarations: [
     PlayersListPage,

@@ -40,27 +40,21 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.translateService.setDefaultLang('ca');
     this.translateService.use('ca');
-    //this.title.setTitle( _('clubName').toString());
 
     this.router.events.subscribe((event: any) => {
-      this.isSearchBarVisible = false;
+      this.title.setTitle('el cercle | tennis taula');
+      
       if (event instanceof NavigationEnd) {
         switch (event.urlAfterRedirects) {
           case '/':
-            this.meta.updateTag({
-              name: 'description',
-              content: _('clubName').toString()
-            });
+
             break;
           case '/' + AppConfig.routes.teams:
-            this.isSearchBarVisible = true;
-            this.title.setTitle(_('teams').toString());
-            this.meta.updateTag({
+          /*  this.meta.updateTag({
               name: 'description',
               content: _('teams').toString()
-            });
+            });*/
             break;
-
         }
       }
     });
