@@ -5,7 +5,7 @@
   "cancel": "Cancelar",
   "cannotVote": "No puedes votar más :(",
   "club":"La Entidad",
-  "clubName":"El Cercle",
+  "clubName":"el cercle | tennis taula",
   "contact":"Contacto",
   "create": "Crear",
   "createPlayer": "Elegir un jugador",
@@ -15,6 +15,7 @@
   "errorHasOcurred": "Ha ocurrido un error",
   "findPlayer": "Busca un jugador",
   "goBack": "Regresar",
+  "photos":"Fotos",
   "player-create-new": {
     "newPlayer": "Nuevo jugador"
   },
