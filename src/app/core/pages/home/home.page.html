@@ -11,7 +11,7 @@
   <hr />
   <article>
 
-    <table class="is-full-width">
+    <table class="is-full-width responsive">
       <thead>
       <tr>
         <th>{{"contact.days" | translate}}</th>
@@ -22,15 +22,9 @@
       <tbody>
 
       <tr>
-        <td>{{"tuesday" | translate}}</td>
-        <td>{{"trainingAddress" | translate}}</td>
-        <td>18:30 - 21:00hs</td>
-      </tr>
-
-      <tr>
-        <td>{{"thursday" | translate}}</td>
-        <td>{{"trainingAddress" | translate}}</td>
-        <td>18:30 - 21:00hs</td>
+        <td data-title='{{"contact.days" | translate}}'>{{"tuesday" | translate}} & {{"thursday" | translate}}</td>
+        <td data-title='{{"contact.location" | translate}}'>{{"trainingAddress" | translate}}</td>
+        <td data-title='{{"contact.time" | translate}}'>18:30 - 21:00hs</td>
       </tr>
     </tbody>
     </table>

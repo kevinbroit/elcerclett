@@ -67,7 +67,7 @@ table {
       background: rgba($lightgray, 0.2);
       border-right: 1px solid $lightgray;
       font-weight: 600;
-      max-width: 100px;
+
     }
 
     &:last-child td {
@@ -111,4 +111,69 @@ table {
       }
     }
   }
+}
+
+
+.responsive {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+@media only screen and (max-width: 800px) {
+    .responsive > thead,
+    .responsive > tbody,
+    .responsive > tbody > tr,
+    .responsive > thead > th {
+        display: block;
+    }
+
+    .responsive > thead > tr,
+    .responsive > thead > tr > th{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .responsive > tbody > tr {
+        border: 1px solid #ccc;
+    }
+
+    .responsive > tbody > tr > td, .responsive > tbody > tr > th {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50% !important;
+        white-space: normal;
+        text-align: left;
+
+        display: block;
+        -webkit-box-sizing: content-box;
+           -moz-box-sizing: content-box;
+                box-sizing: content-box;
+        min-height: 1em;
+    }
+
+    .responsive > tbody > tr > td::before,.responsive> tbody > tr > th::before {
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        text-align: left;
+        font-weight: bold;
+        content: attr(title);
+    }
+
+    .responsive td.responsive-omit-title:nth-child(odd), .responsive td.responsive-omit-title:nth-child(even) {
+        padding-left: 6px;
+    }
+
+    .responsive td.responsive-omit-title::before {
+        display: none;
+    }
+
+    .responsive td.responsive-omit-if-empty:empty {
+        display: none;
+    }
 }
