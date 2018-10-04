@@ -17,7 +17,7 @@ class Team{
 $api_key = '3204bc8768cfd802ecec92c993a53649';
 $user_id='156850972@N06';
 $extras='url_t,url_s,url_m,url_l,description'; //url_sq, url_t, url_s, url_q, url_m, url_n, url_z, url_c, url_l
-$albums_id = array('72157700321213521','72157701889611145','72157673968453278','72157700321139941','72157701654772894');
+$albums_id = array('72157701654772894','72157700321139941','72157673968453278','72157701889611145', '72157700321213521');
 $teams = array();
 
 foreach( $albums_id as $photoset_id )

@@ -23,9 +23,9 @@ class GalleryImage{
   public $raw;
 }
 
-$api_key = 'd47af61524de3b344c995d2b1546486c';
-$user_id='147962491@N07';
-$photoset_id='72157701533591674';
+$api_key = '3204bc8768cfd802ecec92c993a53649';
+$user_id='156850972@N06';
+$photoset_id='72157701854533365';
 $extras='url_t,url_s,url_m,url_l';
 
 $url = 'https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos';
@@ -43,17 +43,17 @@ $photos = array();
 foreach($photo_array as $single_photo){
   $photo = new GalleryImage();
   $photo->dominantColor = '#000000';
-  $photo->preview_xxs = new ImageSize($single_photo->url_t,$single_photo->width_t,$single_photo->height_t);
+  $photo->preview_xxs = new ImageSize($single_photo->url_s,$single_photo->width_s,$single_photo->height_s);
   $photo->preview_xs = new ImageSize($single_photo->url_s,$single_photo->width_s,$single_photo->height_s);
-  $photo->preview_s = new ImageSize($single_photo->url_s,$single_photo->width_s,$single_photo->height_s);
-  $photo->preview_m = new ImageSize($single_photo->url_m,$single_photo->width_m,$single_photo->height_m);
+  $photo->preview_s = new ImageSize($single_photo->url_m,$single_photo->width_m,$single_photo->height_m);
+  $photo->preview_m = new ImageSize($single_photo->url_l,$single_photo->width_l,$single_photo->height_l);
   $photo->preview_l = new ImageSize($single_photo->url_l,$single_photo->width_l,$single_photo->height_l);
   $photo->preview_xl = new ImageSize($single_photo->url_l,$single_photo->width_l,$single_photo->height_l);
   $photo->raw = new ImageSize($single_photo->url_l,$single_photo->width_l,$single_photo->height_l);
   array_push($photos, $photo);
 }
 
-file_put_contents('gallery.json',json_encode($rows));
+file_put_contents('gallery.json',json_encode($photos));
 
 header('Content-type: application/json');
 

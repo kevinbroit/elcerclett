@@ -5,8 +5,8 @@ import {MatDialog} from '@angular/material';
 import {Router} from '@angular/router';
 import {LoggerService} from '../../../../core/services/logger.service';
 import {AppConfig} from '../../../../config/app.config';
-import {Player} from '../../../players/shared/player.model';
-import {PlayerService} from '../../../players/shared/player.service';
+//import {Player} from '../../../players/shared/player.model';
+//import {PlayerService} from '../../../players/shared/player.service';
 
 @Component({
   selector: 'app-teams-list',
@@ -15,18 +15,18 @@ import {PlayerService} from '../../../players/shared/player.service';
 })
 
 export class TeamsListPage implements OnInit {
-  nbCols: number = 4;
-  players: Player[];
+  nbCols: number = 6;
+  teams: Team[];
   error: string;
 
-  constructor(private playerService: PlayerService,
+  constructor(private teamService: TeamService,
               private dialog: MatDialog,
               private router: Router ){
   }
 
   ngOnInit() {
-    this.playerService.getPlayers().subscribe((players: Array<Player>) => {
-      this.players = players;
+    this.teamService.getTeams().subscribe((teams: Array<Team>) => {
+      this.teams = teams;
     });
 
     this.setGridColsByWith(document.body.clientWidth);
@@ -39,15 +39,15 @@ export class TeamsListPage implements OnInit {
 
   setGridColsByWith(width){
     if (width < 950) {
-      this.nbCols = 2;
-    }
-
-    if (width > 950) {
       this.nbCols = 4;
     }
 
+    if (width > 950) {
+      this.nbCols = 6;
+    }
+
     if (width < 750) {
-      this.nbCols = 1;
+      this.nbCols = 2;
     }
   }
 

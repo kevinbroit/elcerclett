@@ -20,6 +20,7 @@
         "/assets/CNAME",
         "/assets/css/BAZEL.md",
         "/assets/css/reset.css",
+        "/assets/gallery.json",
         "/assets/googled41787c6aae2151b.html",
         "/assets/i18n/ca.json",
         "/assets/i18n/en.json",
@@ -54,6 +55,7 @@
     "/assets/CNAME": "5a248ffac96a29ce3102557222a7681a91e3b111",
     "/assets/css/BAZEL.md": "32cd978fd9f6fce7f4729bf1ed009a252ed0810d",
     "/assets/css/reset.css": "82d5673e122656776dfc4e78e2883974f5eb0cdc",
+    "/assets/gallery.json": "bed8219d92839fea47c1083d99e80cfcc6cef0f4",
     "/assets/googled41787c6aae2151b.html": "a9fc98624735e71879021f130b38cf19491bb7c5",
     "/assets/i18n/ca.json": "6cfb5452764f913b68736a7e6f88070d42ff8aa5",
     "/assets/i18n/en.json": "edfeaf37154afd863a8c4840557f6d7f29da67ee",
@@ -78,9 +80,9 @@
     "/assets/news.json": "2bf8232a9ae43b9b80ccf34064e77b50d4210eba",
     "/assets/players.json": "1b7580e082863bcb9ef14011fdc0e70f9d3af983",
     "/assets/sitemap.xml": "d62d46bc8532afef8af9cecfd1aedd1f27e73fee",
-    "/assets/teams.json": "68ca16a265af8ba30ed2a29296c9888664533b46",
+    "/assets/teams.json": "89cf35558a67687a396b3b70763de3b5a9469053",
     "/favicon.ico": "22100de6d5d3644f25030bff36cf5a37a9b6f4ab",
-    "/index.html": "78f06b61cd195f0a0d938a736c8be853a311fa01"
+    "/index.html": "ed9da840bf2a6b8692de1dff0c5d9dfa65b4c9a7"
   },
   "navigationUrls": [
     {

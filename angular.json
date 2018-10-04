@@ -56,7 +56,7 @@
             },
             "scripts": [
               "src/assets/js/modernizr.js",
-              "src/assets/js/gtm.js"
+              
             ]
           },
           "configurations": {
@@ -108,7 +108,7 @@
             "karmaConfig": "src/karma.conf.js",
             "scripts": [
               "src/assets/js/modernizr.js",
-              "src/assets/js/gtm.js"
+
             ],
             "styles": [
               {
